@@ -1,0 +1,158 @@
+/* CSS - Explicação detalhada */
+
+/* Reset básico para garantir consistência entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Inclui padding e border no cálculo de width/height */
+}
+
+/* Estilização do corpo da página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte moderna */
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%); /* Gradiente colorido */
+    min-height: 100vh; /* Altura mínima de toda a viewport */
+    display: flex; /* Usa flexbox para layout */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 20px; /* Espaçamento nas bordas */
+}
+
+/* Container principal */
+.container {
+    background-color: white; /* Fundo branco */
+    padding: 40px; /* Espaçamento interno generoso */
+    border-radius: 20px; /* Cantos bem arredondados */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); /* Sombra suave para profundidade */
+    text-align: center; /* Centraliza o texto */
+    max-width: 450px; /* Largura máxima */
+    width: 100%; /* Ocupa 100% até a largura máxima */
+    transition: transform 0.3s ease; /* Transição suave para efeitos */
+}
+
+/* Efeito sutil de elevação ao passar o mouse */
+.container:hover {
+    transform: translateY(-5px); /* Move levemente para cima */
+}
+
+/* Estilização do título */
+h1 {
+    color: #2c3e50; /* Cor escura para boa legibilidade */
+    margin-bottom: 30px; /* Espaço abaixo do título */
+    font-size: 2.2rem; /* Tamanho de fonte maior */
+    font-weight: 700; /* Peso da fonte mais forte */
+}
+
+/* Grupo de input */
+.input-group {
+    margin-bottom: 25px; /* Espaço abaixo do grupo */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+/* Estilização do label */
+label {
+    display: block; /* Faz ocupar toda a linha */
+    margin-bottom: 10px; /* Espaço abaixo do label */
+    color: #34495e; /* Cor do texto */
+    font-weight: 600; /* Peso semi-negrito */
+    font-size: 1.1rem; /* Tamanho ligeiramente maior */
+}
+
+/* Estilização do campo de input */
+input[type="number"] {
+    width: 100%; /* Ocupa toda a largura disponível */
+    padding: 15px; /* Espaçamento interno confortável */
+    border: 2px solid #e0e0e0; /* Borda cinza clara */
+    border-radius: 10px; /* Cantos arredondados */
+    font-size: 16px; /* Tamanho de fonte padrão */
+    transition: all 0.3s ease; /* Transição suave para todos os efeitos */
+}
+
+/* Efeitos quando o input está em foco (selecionado) */
+input[type="number"]:focus {
+    outline: none; /* Remove contorno padrão do navegador */
+    border-color: #3498db; /* Muda cor da borda para azul */
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2); /* Sombra azul suave */
+}
+
+/* Estilização do botão */
+button {
+    background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%); /* Gradiente azul-escuro */
+    color: white; /* Texto branco */
+    border: none; /* Remove borda padrão */
+    padding: 16px 32px; /* Espaçamento interno generoso */
+    border-radius: 10px; /* Cantos arredondados */
+    font-size: 18px; /* Tamanho de fonte maior */
+    font-weight: 600; /* Texto semi-negrito */
+    cursor: pointer; /* Cursor de mão ao passar por cima */
+    transition: all 0.3s ease; /* Transição suave para todos os efeitos */
+    width: 100%; /* Ocupa toda a largura disponível */
+    margin-bottom: 25px; /* Espaço abaixo do botão */
+}
+
+/* Efeitos de hover no botão */
+button:hover {
+    transform: translateY(-3px); /* Move o botão 3px para cima */
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2); /* Aumenta a sombra */
+}
+
+/* Efeitos quando o botão está ativo (clicado) */
+button:active {
+    transform: translateY(0); /* Volta à posição original */
+}
+
+/* Área de resultado */
+.result {
+    background: #f8f9fa; /* Fundo cinza muito claro */
+    padding: 25px; /* Espaçamento interno */
+    border-radius: 10px; /* Cantos arredondados */
+    border-left: 5px solid #3498db; /* Borda lateral colorida */
+    transition: all 0.5s ease; /* Transição mais lenta para suavidade */
+    opacity: 0; /* Inicialmente invisível */
+    max-height: 0; /* Inicialmente com altura zero */
+    overflow: hidden; /* Esconde conteúdo que excede */
+}
+
+/* Classe para mostrar o resultado */
+.show {
+    opacity: 1; /* Torna visível */
+    max-height: 200px; /* Define altura máxima para expansão */
+}
+
+/* Estilização do texto do resultado */
+.result-text {
+    font-size: 1.4rem; /* Tamanho de fonte maior */
+    font-weight: 600; /* Texto semi-negrito */
+    margin-bottom: 10px; /* Espaço abaixo do texto */
+}
+
+/* Estilização do valor do resultado */
+.result-value {
+    font-size: 2rem; /* Tamanho de fonte bem maior */
+    font-weight: 700; /* Texto em negrito */
+    color: #2c3e50; /* Cor escura */
+}
+
+/* Cores específicas para resultados par/ímpar */
+.par {
+    color: #27ae60; /* Verde para números pares */
+}
+
+.impar {
+    color: #e74c3c; /* Vermelho para números ímpares */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 480px) {
+    .container {
+        padding: 30px 20px; /* Reduz o padding em telas pequenas */
+    }
+    
+    h1 {
+        font-size: 1.8rem; /* Reduz tamanho do título */
+    }
+    
+    button {
+        padding: 14px 28px; /* Reduz padding do botão */
+    }
+}
