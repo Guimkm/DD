@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Média</title>
+    <link rel="stylesheet" href="Calculadora de média.CSS">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Média</h1>
+        <p class="subtitle">Calcule a média de duas notas e verifique a situação do aluno</p>
+        
+        <div class="input-group">
+            <div class="input-row">
+                <div class="input-field">
+                    <label for="nota1">Primeira Nota (N1):</label>
+                    <input type="number" id="nota1" min="0" max="10" step="0.1" placeholder="Ex: 7.5">
+                </div>
+                <div class="input-field">
+                    <label for="nota2">Segunda Nota (N2):</label>
+                    <input type="number" id="nota2" min="0" max="10" step="0.1" placeholder="Ex: 8.0">
+                </div>
+            </div>
+        </div>
+
+        <div class="grade-examples">
+            <h3>Exemplos de Notas:</h3>
+            <div class="examples-grid">
+                <div class="example-item" data-nota1="6.0" data-nota2="5.0">
+                    <div class="example-grade">6.0 + 5.0</div>
+                    <div class="example-result reprovado">Reprovado</div>
+                </div>
+                <div class="example-item" data-nota1="7.0" data-nota2="7.0">
+                    <div class="example-grade">7.0 + 7.0</div>
+                    <div class="example-result aprovado">Aprovado</div>
+                </div>
+                <div class="example-item" data-nota1="8.5" data-nota2="9.0">
+                    <div class="example-grade">8.5 + 9.0</div>
+                    <div class="example-result aprovado">Aprovado</div>
+                </div>
+                <div class="example-item" data-nota1="5.0" data-nota2="8.0">
+                    <div class="example-grade">5.0 + 8.0</div>
+                    <div class="example-result reprovado">Reprovado</div>
+                </div>
+            </div>
+        </div>
+        
+        <button onclick="calcularMedia()" class="btn-calcular">
+            Calcular Média
+        </button>
+        <button onclick="limparCampos()" class="btn-limpar">
+            Limpar Campos
+        </button>
+        
+        <div id="resultado" class="resultado">
+            <div class="result-content">
+                <div class="result-icon" id="resultIcon"></div>
+                <div class="result-text">
+                    <div class="result-title" id="resultTitle">Aguardando cálculo</div>
+                    <div class="result-message" id="resultMessage">Digite as duas notas para calcular a média</div>
+                    <div class="result-details" id="resultDetails"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h3>Critérios de Avaliação:</h3>
+            <div class="criteria-grid">
+                <div class="criterion">
+                    <div class="criterion-label">Média ≥ 7.0</div>
+                    <div class="criterion-status aprovado">Aprovado</div>
+                </div>
+                <div class="criterion">
+                    <div class="criterion-label">Média < 7.0</div>
+                    <div class="criterion-status reprovado">Reprovado</div>
+                </div>
+            </div>
+            <div class="formula">
+                <strong>Fórmula:</strong> Média = (N1 + N2) ÷ 2
+            </div>
+        </div>
+    </div>
+
+    <script src="Calculadora de média.JS"></script>
+</body>
+</html>

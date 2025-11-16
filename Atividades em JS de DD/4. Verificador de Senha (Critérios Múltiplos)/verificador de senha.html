@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Senha Forte</title>
+    <link rel="stylesheet" href="verificador de senha.CSS">
+</head>
+<body>
+    <div class="container">
+        <h1>Verificador de Senha Forte</h1>
+        <p class="subtitle">Verifique se sua senha atende aos critérios de segurança</p>
+        
+        <div class="input-group">
+            <label for="senha">Digite sua senha:</label>
+            <div class="password-wrapper">
+                <input type="password" id="senha" placeholder="Digite sua senha aqui">
+            </div>
+        </div>
+
+        <div class="criteria">
+            <h3>Critérios para senha forte:</h3>
+            <ul>
+                <li id="criterio-tamanho" class="criterio">
+                    <span class="icon">❌</span>
+                    Ter mais de 8 caracteres
+                </li>
+                <li id="criterio-diferente" class="criterio">
+                    <span class="icon">❌</span>
+                    Ser diferente de "12345678"
+                </li>
+            </ul>
+        </div>
+        
+        <button onclick="verificarSenha()" class="btn-verificar">
+            Verificar Senha
+        </button>
+        <button onclick="limparCampos()" class="btn-limpar">
+            Limpar
+        </button>
+        
+        <div id="resultado" class="resultado">
+            <div class="result-content">
+                <div class="result-icon" id="resultIcon">❓</div>
+                <div class="result-text">
+                    <div class="result-title" id="resultTitle">Aguardando verificação</div>
+                    <div class="result-message" id="resultMessage">Digite uma senha para verificar</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="examples">
+            <h3>Exemplos para testar:</h3>
+            <div class="examples-grid">
+                <div class="example-item" onclick="preencherSenha('12345678')">
+                    <span class="example-senha">12345678</span>
+                    <span class="example-result">Fraca</span>
+                </div>
+                <div class="example-item" onclick="preencherSenha('senhafraca')">
+                    <span class="example-senha">senhafraca</span>
+                    <span class="example-result">Fraca</span>
+                </div>
+                <div class="example-item" onclick="preencherSenha('SenhaForte123!')">
+                    <span class="example-senha">SenhaForte123!</span>
+                    <span class="example-result">Forte</span>
+                </div>
+                <div class="example-item" onclick="preencherSenha('minhasenhasuper')">
+                    <span class="example-senha">minhasenhasuper</span>
+                    <span class="example-result">Forte</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="verificador de senha.JS"></script>
+</body>
+</html>

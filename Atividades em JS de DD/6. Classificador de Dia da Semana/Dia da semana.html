@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificador de Dia da Semana</title>
+    <link rel="stylesheet" href="Dia da semana.CSS">
+</head>
+<body>
+    <div class="container">
+        <h1>Classificador de Dia da Semana</h1>
+        <p class="subtitle">Descubra o nome do dia a partir do número</p>
+        
+        <div class="input-group">
+            <label for="numeroDia">Digite um número de 1 a 7:</label>
+            <input type="number" id="numeroDia" min="1" max="7" placeholder="Ex: 3">
+        </div>
+
+        <div class="week-grid">
+            <div class="day-item" data-day="1">
+                <div class="day-number">1</div>
+                <div class="day-name">Domingo</div>
+            </div>
+            <div class="day-item" data-day="2">
+                <div class="day-number">2</div>
+                <div class="day-name">Segunda</div>
+            </div>
+            <div class="day-item" data-day="3">
+                <div class="day-number">3</div>
+                <div class="day-name">Terça</div>
+            </div>
+            <div class="day-item" data-day="4">
+                <div class="day-number">4</div>
+                <div class="day-name">Quarta</div>
+            </div>
+            <div class="day-item" data-day="5">
+                <div class="day-number">5</div>
+                <div class="day-name">Quinta</div>
+            </div>
+            <div class="day-item" data-day="6">
+                <div class="day-number">6</div>
+                <div class="day-name">Sexta</div>
+            </div>
+            <div class="day-item" data-day="7">
+                <div class="day-number">7</div>
+                <div class="day-name">Sábado</div>
+            </div>
+        </div>
+        
+        <button onclick="verificarDia()" class="btn-verificar">
+            Verificar Dia
+        </button>
+        <button onclick="limparCampos()" class="btn-limpar">
+            Limpar
+        </button>
+        
+        <div id="resultado" class="resultado">
+            <div class="result-content">
+                <div class="result-icon" id="resultIcon"></div>
+                <div class="result-text">
+                    <div class="result-title" id="resultTitle">Aguardando verificação</div>
+                    <div class="result-message" id="resultMessage">Digite um número ou clique em um dia</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h3>Como funciona:</h3>
+            <p>Digite um número de 1 a 7 no campo acima ou clique diretamente em um dos dias da semana para ver o resultado.</p>
+        </div>
+    </div>
+
+    <script src="Dia da semana.JS"></script>
+</body>
+</html>

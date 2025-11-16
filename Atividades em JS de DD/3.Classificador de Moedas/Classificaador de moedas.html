@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificador de Moedas</title>
+    <link rel="stylesheet" href="Classificaador de moedas.CSS">
+</head>
+<body>
+    <div class="container">
+        <h1>Classificador de Moedas</h1>
+        <p class="subtitle">Descubra o nome da moeda pelo seu valor</p>
+        
+        <div class="input-group">
+            <label for="valorMoeda">Digite o valor da moeda:</label>
+            <div class="input-wrapper">
+                <span class="currency-symbol">R$</span>
+                <input type="number" id="valorMoeda" step="0.01" min="0" max="10" 
+                       placeholder="Ex: 0.50" onfocus="this.placeholder=''">
+            </div>
+            <small class="hint">Valores suportados: 0.01, 0.05, 0.10, 0.25, 0.50, 1.00</small>
+        </div>
+        
+        <button onclick="classificarMoedaInput()" class="btn-classificar">
+            Classificar Moeda
+        </button>
+        <button onclick="limparCampos()" class="btn-limpar">
+            Limpar
+        </button>
+        
+        <div id="resultado" class="resultado">
+            <div class="coin-display">
+                <div class="coin-icon">🪙</div>
+                <div class="coin-info">
+                    <div class="coin-value" id="valorExibido">-</div>
+                    <div class="coin-name" id="nomeMoeda">Selecione um valor</div>
+                </div>
+            </div>
+        </div>
+
+    <script src="Classificaador de moedas.JS"></script>
+</body>
+</html>

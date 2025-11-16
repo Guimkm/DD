@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Nome Completo</title>
+    <link rel="stylesheet" href="Gerador de nome.CSS">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerador de Nome Completo</h1>
+        <p class="subtitle">Combine primeiro nome e sobrenome para formar o nome completo</p>
+        
+        <div class="input-group">
+            <div class="input-row">
+                <div class="input-field">
+                    <label for="primeiroNome">Primeiro Nome:</label>
+                    <input type="text" id="primeiroNome" placeholder="Ex: Ana">
+                </div>
+                <div class="input-field">
+                    <label for="sobrenome">Sobrenome:</label>
+                    <input type="text" id="sobrenome" placeholder="Ex: Silva">
+                </div>
+            </div>
+        </div>
+
+        <div class="name-examples">
+            <h3>Exemplos Prontos:</h3>
+            <div class="examples-grid">
+                <div class="example-item" data-nome="Ana" data-sobrenome="Silva">
+                    <div class="example-name">Ana Silva</div>
+                    <div class="example-parts">Ana + Silva</div>
+                </div>
+                <div class="example-item" data-nome="João" data-sobrenome="Santos">
+                    <div class="example-name">João Santos</div>
+                    <div class="example-parts">João + Santos</div>
+                </div>
+                <div class="example-item" data-nome="Maria" data-sobrenome="Oliveira">
+                    <div class="example-name">Maria Oliveira</div>
+                    <div class="example-parts">Maria + Oliveira</div>
+                </div>
+                <div class="example-item" data-nome="Carlos" data-sobrenome="Pereira">
+                    <div class="example-name">Carlos Pereira</div>
+                    <div class="example-parts">Carlos + Pereira</div>
+                </div>
+            </div>
+        </div>
+        
+        <button onclick="gerarNome()" class="btn-gerar">
+            Gerar Nome Completo
+        </button>
+        <button onclick="limparCampos()" class="btn-limpar">
+            Limpar Campos
+        </button>
+        
+        <div id="resultado" class="resultado">
+            <div class="result-content">
+                <div class="result-icon" id="resultIcon"></div>
+                <div class="result-text">
+                    <div class="result-title" id="resultTitle">Aguardando geração</div>
+                    <div class="result-message" id="resultMessage">Digite o primeiro nome e sobrenome</div>
+                    <div class="result-fullname" id="resultFullname"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="Gerador de nome.JS"></script>
+</body>
+</html>

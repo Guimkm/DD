@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 8px;
+    font-size: 32px;
+}
+
+.subtitle {
+    color: #666;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.input-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #555;
+    font-size: 16px;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.currency-symbol {
+    position: absolute;
+    left: 15px;
+    font-weight: bold;
+    color: #666;
+    z-index: 2;
+}
+
+input {
+    width: 100%;
+    padding: 15px 15px 15px 40px;
+    border: 2px solid #e1e5e9;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    background-color: #f8f9fa;
+}
+
+input:focus {
+    outline: none;
+    border-color: #667eea;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.hint {
+    display: block;
+    margin-top: 8px;
+    color: #888;
+    font-size: 12px;
+}
+
+button {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 12px;
+}
+
+.btn-classificar {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+}
+
+.btn-classificar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.btn-limpar {
+    background: #f8f9fa;
+    color: #666;
+    border: 2px solid #e1e5e9;
+}
+
+.btn-limpar:hover {
+    background: #e9ecef;
+    transform: translateY(-1px);
+}
+
+.resultado {
+    margin-top: 30px;
+    padding: 25px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    text-align: center;
+}
+
+.coin-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.coin-icon {
+    font-size: 48px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.coin-info {
+    text-align: left;
+}
+
+.coin-value {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.coin-name {
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+.moedas-suportadas {
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 2px solid #e1e5e9;
+}
+
+.moedas-suportadas h3 {
+    color: #555;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.moedas-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.moeda-item {
+    padding: 12px;
+    border: 2px solid #e1e5e9;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #f8f9fa;
+}
+
+.moeda-item:hover {
+    border-color: #667eea;
+    background-color: #e3f2fd;
+    transform: translateY(-2px);
+}
+
+.moeda-valor {
+    display: block;
+    font-weight: bold;
+    color: #333;
+    font-size: 14px;
+}
+
+.moeda-nome {
+    display: block;
+    color: #666;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.valor-desconhecido {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a24) !important;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 25px;
+        margin: 10px;
+    }
+    
+    h1 {
+        font-size: 26px;
+    }
+    
+    .moedas-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .coin-display {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .coin-info {
+        text-align: center;
+    }
+}

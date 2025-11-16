@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatador de Telefone</title>
+    <link rel="stylesheet" href="Formatador de telefone.CSS">
+</head>
+<body>
+    <div class="container">
+        <h1>Formatador de Telefone</h1>
+        <p class="subtitle">Converta números de telefone para o formato com traço</p>
+        
+        <div class="input-group">
+            <label for="telefone">Digite o número de telefone (8 dígitos):</label>
+            <div class="input-wrapper">
+                <input type="text" id="telefone" maxlength="8" placeholder="Ex: 99887766">
+                <span class="input-hint">8 dígitos</span>
+            </div>
+        </div>
+
+        <div class="phone-examples">
+            <h3>Exemplos Prontos:</h3>
+            <div class="examples-grid">
+                <div class="example-item" data-telefone="99887766">
+                    <div class="example-unformatted">99887766</div>
+                    <div class="example-arrow">→</div>
+                    <div class="example-formatted">9988-7766</div>
+                </div>
+                <div class="example-item" data-telefone="12345678">
+                    <div class="example-unformatted">12345678</div>
+                    <div class="example-arrow">→</div>
+                    <div class="example-formatted">1234-5678</div>
+                </div>
+                <div class="example-item" data-telefone="55554444">
+                    <div class="example-unformatted">55554444</div>
+                    <div class="example-arrow">→</div>
+                    <div class="example-formatted">5555-4444</div>
+                </div>
+                <div class="example-item" data-telefone="98765432">
+                    <div class="example-unformatted">98765432</div>
+                    <div class="example-arrow">→</div>
+                    <div class="example-formatted">9876-5432</div>
+                </div>
+            </div>
+        </div>
+        
+        <button onclick="formatarTelefoneInput()" class="btn-formatar">
+            Formatador Telefone
+        </button>
+        <button onclick="limparCampos()" class="btn-limpar">
+            Limpar Campos
+        </button>
+        
+        <div id="resultado" class="resultado">
+            <div class="result-content">
+                <div class="result-icon" id="resultIcon"></div>
+                <div class="result-text">
+                    <div class="result-title" id="resultTitle">Aguardando formatação</div>
+                    <div class="result-message" id="resultMessage">Digite um número de 8 dígitos</div>
+                    <div class="result-telefone" id="resultTelefone"></div>
+                </div>
+            </div>
+        </div>
+            <div class="explanation">
+                <p>O método <code>slice(0, 4)</code> pega os primeiros 4 dígitos e <code>slice(4, 8)</code> pega os últimos 4 dígitos.</p>
+            </div>
+        </div>
+
+    <script src="Formatador de telefone.JS"></script>
+</body>
+</html>

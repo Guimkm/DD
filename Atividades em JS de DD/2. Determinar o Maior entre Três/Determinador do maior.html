@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Determinador de maior</title>
+    <link rel="stylesheet" href="Determinador do maior.CSS">
+</head>
+<body>
+    <div class="container">
+        <h1>Encontrar o Maior Número</h1>
+        <p>Digite três números para descobrir qual é o maior:</p>
+        
+        <div class="input-group">
+            <div class="input-field">
+                <label for="numero1">Primeiro número:</label>
+                <input type="number" id="numero1" placeholder="Digite o primeiro número">
+            </div>
+            
+            <div class="input-field">
+                <label for="numero2">Segundo número:</label>
+                <input type="number" id="numero2" placeholder="Digite o segundo número">
+            </div>
+            
+            <div class="input-field">
+                <label for="numero3">Terceiro número:</label>
+                <input type="number" id="numero3" placeholder="Digite o terceiro número">
+            </div>
+        </div>
+        
+        <button onclick="verificarMaior()">Encontrar Maior Número</button>
+        <button onclick="limparCampos()" class="btn-limpar">Limpar</button>
+        
+        <div id="resultado" class="resultado"></div>
+    </div>
+
+    <script src="Determinador do maior.JS"></script>
+</body>
+</html>
